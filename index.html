@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- Welcome Page -->
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+    <script src='scripts/jquery.min.js'></script>
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+
+    <!-- SIMPLE HEADER -->
+    <div id="simple_header">
+        <header>
+            <span id="simple_logo" class="left">
+                <h1 class="logo header-el">Building the Future</h1>
+            </span>
+        </header>
+    </div>
+
+        <!-- HOME HEADER -->
+    <div id="top_header">
+        <header>
+            <span class="left">
+                <h1 id="home_logo" class="logo header-el">Building the Future</h1>
+            </span>
+
+            <span class="right">
+                <div class='menu'>
+                    <div id='pfp-button' class='right'>
+                    </div>
+                    <ul class='menu-content' style='list-style:none'>
+                        <li id='edit_account_button'>Edit Account</li>
+                        <hr class='hr1' />
+                        <li id='log_out_button'>Log Out</li>
+                    </ul>
+                </div>
+            </span>
+        </header>
+    </div>
+
+    <!-- WELCOME PAGE -->
+    <div id="welcome_page">
+        <!-- <img id="background_image" src="images/back.jpg"> -->
+        <h1 id="title">
+            Welcome to Building the Future!
+        </h1>
+        <p id="welcome_header">Want to learn how to code? heheheeh</p>
+        <div id="login">
+            <button id="welcome_login_button" class="button">
+                Login
+            </button>
+            <button id="welcome_signup_button" class="button">
+                Sign up
+            </button>
+        </div>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <div id="login_page">
+        <h1 id="title">
+            Login
+        </h1>
+        <div id="login">
+            <input id="username_login" type="text" class="input-box" size="50" placeholder="Uniqname">
+            <input id="password_login" type="password" class="input-box" size="50" placeholder="Password">
+            <div id="login_error">
+            </div>
+        </div>
+        <div id="login">
+            <button id="login_button" class="button" style="padding: 5px 15px;">
+                Login!
+            </button>
+        </div>
+    </div>
+
+    <!-- CREATE ACCOUNT PAGE -->
+    <div id="create_account">
+        <h1 id="title">
+            Create New Account
+        </h1>
+        <div id="login">
+            <input id="name_field" type="text" class="input-box" size="50" placeholder="Full Name">
+            <p>Account Information</p>
+            <input id="uniqname_field" type="text" class="input-box" size="50" placeholder="Username">
+            <input id="password_field" type="password" class="input-box" size="50" placeholder="Password">
+            <!-- <input type="password" class="input-box" size="50" placeholder="Confirm Password"> -->
+            <label for="avatar">Upload a profile picture:</label>
+            <input type="file" id="pfp_field" name="pfp" accept="image/png, image/jpeg" defaultValue="defaultUser.png">
+            <p style="padding-top: 10px;">Personal Information</p>
+            <div id="choose_experience">
+                <p>What grade are you in? </p>
+                <select id="profileExperience" class="selectpicker">
+                    <!-- <option selected value> Nothing Selected </option> -->
+                    <option value="Elementary">Elementary</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+
+            <div id="birthday">
+                <label for="birthday">
+                    <p style="padding-top: 10px;">Enter your birthday:</p>
+                    <input type="date" id="bday_field" name="birthday" />
+                </label>
+            </div>
+
+        </div>
+        <div id="login">
+            <button id="create_account_button" class="button" style="padding: 5px 15px;">
+                Create Account!
+            </button>
+        </div>
+    </div>
+
+    <!-- EDIT ACCOUNT PAGE -->
+    <div id="edit_account" style="display: grid; justify-content: center; align-items: center; padding: 15px; color: white;">
+        <h1 id="title">
+            Edit Your Account
+        </h1>
+        <div id="edit_info">
+            <span>Uniqname: <div id="edit_uniqname"></div></span>
+            <span>Password: <div id="edit_password"></div></span>
+            <label for='avatar'>Profile Picture:</label>
+            <div id="edit_pfp"></div>
+            <span>Name: <div id="edit_name" style="padding-top: 10px;"></div></span>
+            <div id="edit_gender"></div>
+            <div id="edit_experience">
+                <p>Experience: </p>
+                <select id='editExperience' class='selectpicker'>
+                    <option selected value> Nothing Selected </option>
+                    <option value='Novice'>Novice</option>
+                    <option value='Intermediate'>Intermediate</option>
+                    <option value='Advanced'>Advanced</option>
+                </select>
+            </div>
+            <div id="save_info" style="margin:auto; padding-top: 15px;">
+                <button id="save_account_button" class="button" style="padding: 5px 15px;">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="home_page">
+        <div class="cards_grid">
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 1</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 2</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 3</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 4</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 5</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 6</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/groot.jpg" alt="Avatar" style="width:100%">
+              <div class="container">
+                <div class="chapter_title">
+                    <b>Chapter 1</b>
+                </div>
+                <p>What is programming?</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sorry_page">
+        <h1 id="title">
+            Sorry, you are too young.
+        </h1>
+        <div>
+            <button id="simple_welcome" class="button" style="padding: 15px;">
+                Home
+            </button>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
